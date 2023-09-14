@@ -12,13 +12,17 @@ class SoccerballHeaven:
     def __init__(self):
         pass
 
+    def get_number_soccerballs(self):
+        # validation
+        if self._number_of_soccer_balls > 0:
+            return self._number_of_soccer_balls
+        else:
+            return "You must order at least on soccer ball"
+    def get_total_sale(self):
+        return self._total_sale
+
     def calculate(self, number_of_soccer_balls):
         # TODO: calculate costs of the hotdogs purchased
-        self.number_of_soccer_balls = number_of_soccer_balls
-        self.total_sale = self.number_of_soccer_balls * SOCCER_BALL_COST
+        self._number_of_soccer_balls = number_of_soccer_balls
+        self._total_sale = self._number_of_soccer_balls * SOCCER_BALL_COST
         
-
-    def display(self):
-        # TODO: Display transaction for customer
-        print(f"Number of soccer balls: {self.number_of_soccer_balls}")
-        print(f"Your total cost was: ${self.total_sale:,.2f}")

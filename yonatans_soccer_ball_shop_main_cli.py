@@ -13,8 +13,9 @@ def get_input():
 
 def display():
         # TODO: Display transaction for customer
-        number_of_soccer_balls = soccerball.SoccerballHeaven.number_of_soccer_balls
-        total_sale = soccerball.SoccerballHeaven.total_sale
+        number_of_soccer_balls = yonatans_soccerball.get_number_soccerballs()
+        total_sale = yonatans_soccerball.get_total_sale()
+
         print(f"Number of soccer balls: {number_of_soccer_balls}")
         print(f"Your total cost was: ${total_sale:,.2f}")
 
@@ -24,5 +25,5 @@ yonatans_soccerball = soccerball.SoccerballHeaven()
 
 yonatans_soccerball.calculate(number_of_soccer_balls)
 
-yonatans_soccerball.display()
+display()
 
